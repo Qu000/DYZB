@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
-		518509951F9B319900B14941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509941F9B319900B14941 /* ViewController.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
 		5185099D1F9B319900B14941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5185099B1F9B319900B14941 /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		518509941F9B319900B14941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		518509991F9B319900B14941 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5185099C1F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,8 +75,8 @@
 		518509911F9B319900B14941 /* DYZB_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				518509B21F9B36F200B14941 /* Classes */,
 				518509921F9B319900B14941 /* AppDelegate.swift */,
-				518509941F9B319900B14941 /* ViewController.swift */,
 				518509961F9B319900B14941 /* Main.storyboard */,
 				518509991F9B319900B14941 /* Assets.xcassets */,
 				5185099B1F9B319900B14941 /* LaunchScreen.storyboard */,
@@ -94,6 +92,61 @@
 				518509A91F9B319900B14941 /* Info.plist */,
 			);
 			path = DYZB_SwiftTests;
+			sourceTree = "<group>";
+		};
+		518509B21F9B36F200B14941 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				518509B61F9B36F200B14941 /* Main */,
+				518509B41F9B36F200B14941 /* Home */,
+				518509B51F9B36F200B14941 /* Live */,
+				518509B31F9B36F200B14941 /* Follow */,
+				518509B71F9B36F200B14941 /* Profile */,
+				518509B81F9B36F200B14941 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		518509B31F9B36F200B14941 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		518509B41F9B36F200B14941 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		518509B51F9B36F200B14941 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		518509B61F9B36F200B14941 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		518509B71F9B36F200B14941 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		518509B81F9B36F200B14941 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				518509951F9B319900B14941 /* ViewController.swift in Sources */,
 				518509931F9B319900B14941 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +462,7 @@
 				518509AE1F9B319900B14941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		518509AF1F9B319900B14941 /* Build configuration list for PBXNativeTarget "DYZB_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +471,7 @@
 				518509B11F9B319900B14941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
