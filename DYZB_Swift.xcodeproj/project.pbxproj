@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51492F541F9D774D00EE7ED7 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F521F9D774D00EE7ED7 /* WebP.framework */; };
+		51492F551F9D774D00EE7ED7 /* libYZwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F531F9D774D00EE7ED7 /* libYZwebp.a */; };
+		51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F6E1F9D827C00EE7ED7 /* Home.storyboard */; };
+		51492F731F9D829000EE7ED7 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F711F9D829000EE7ED7 /* Live.storyboard */; };
+		51492F761F9D82B700EE7ED7 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F741F9D82B700EE7ED7 /* Follow.storyboard */; };
+		51492F791F9D82CD00EE7ED7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F771F9D82CD00EE7ED7 /* Profile.storyboard */; };
+		51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */; };
+		51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */; };
+		51492FC21F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FC11F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift */; };
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
@@ -25,6 +34,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51492F511F9D774D00EE7ED7 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		51492F521F9D774D00EE7ED7 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
+		51492F531F9D774D00EE7ED7 /* libYZwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYZwebp.a; sourceTree = "<group>"; };
+		51492F6F1F9D827C00EE7ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB_Swift/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
+		51492F721F9D829000EE7ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB_Swift/Base.lproj/Live.storyboard; sourceTree = SOURCE_ROOT; };
+		51492F751F9D82B700EE7ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB_Swift/Base.lproj/Follow.storyboard; sourceTree = SOURCE_ROOT; };
+		51492F781F9D82CD00EE7ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DYZB_Swift/Base.lproj/Profile.storyboard; sourceTree = SOURCE_ROOT; };
+		51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYHomeViewController.swift; sourceTree = "<group>"; };
+		51492FC11F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51492F551F9D774D00EE7ED7 /* libYZwebp.a in Frameworks */,
+				51492F541F9D774D00EE7ED7 /* WebP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +75,160 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51492F491F9D771700EE7ED7 /* DYZBResouce */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DYZBResouce;
+			path = Tools/DYZBResouce;
+			sourceTree = "<group>";
+		};
+		51492F4E1F9D774D00EE7ED7 /* YZwebp */ = {
+			isa = PBXGroup;
+			children = (
+				51492F4F1F9D774D00EE7ED7 /* include */,
+				51492F531F9D774D00EE7ED7 /* libYZwebp.a */,
+			);
+			path = YZwebp;
+			sourceTree = "<group>";
+		};
+		51492F4F1F9D774D00EE7ED7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				51492F501F9D774D00EE7ED7 /* YZwebp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		51492F501F9D774D00EE7ED7 /* YZwebp */ = {
+			isa = PBXGroup;
+			children = (
+				51492F511F9D774D00EE7ED7 /* UIImage+WebP.h */,
+				51492F521F9D774D00EE7ED7 /* WebP.framework */,
+			);
+			path = YZwebp;
+			sourceTree = "<group>";
+		};
+		51492F7C1F9D9AEE00EE7ED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				518509961F9B319900B14941 /* Main.storyboard */,
+				51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51492F7E1F9D9AEE00EE7ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51492F7F1F9D9AEE00EE7ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51492F811F9D9B1700EE7ED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51492F741F9D82B700EE7ED7 /* Follow.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51492F821F9D9B1700EE7ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51492F831F9D9B1700EE7ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51492F841F9D9B2000EE7ED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51492F6E1F9D827C00EE7ED7 /* Home.storyboard */,
+				51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51492F851F9D9B2000EE7ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51492F861F9D9B2000EE7ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51492F871F9D9B2800EE7ED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51492F711F9D829000EE7ED7 /* Live.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51492F881F9D9B2800EE7ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51492F891F9D9B2800EE7ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51492F8A1F9D9B3000EE7ED7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51492F771F9D82CD00EE7ED7 /* Profile.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51492F8B1F9D9B3000EE7ED7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51492F8C1F9D9B3000EE7ED7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51492FC01F9DD3DC00EE7ED7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				51492FC11F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		518509861F9B319900B14941 = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +252,6 @@
 			children = (
 				518509B21F9B36F200B14941 /* Classes */,
 				518509921F9B319900B14941 /* AppDelegate.swift */,
-				518509961F9B319900B14941 /* Main.storyboard */,
 				518509991F9B319900B14941 /* Assets.xcassets */,
 				5185099B1F9B319900B14941 /* LaunchScreen.storyboard */,
 				5185099E1F9B319900B14941 /* Info.plist */,
@@ -103,6 +277,7 @@
 				518509B31F9B36F200B14941 /* Follow */,
 				518509B71F9B36F200B14941 /* Profile */,
 				518509B81F9B36F200B14941 /* Tools */,
+				51492F491F9D771700EE7ED7 /* DYZBResouce */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -110,6 +285,9 @@
 		518509B31F9B36F200B14941 /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				51492F821F9D9B1700EE7ED7 /* Model */,
+				51492F831F9D9B1700EE7ED7 /* View */,
+				51492F811F9D9B1700EE7ED7 /* Controller */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -117,6 +295,9 @@
 		518509B41F9B36F200B14941 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				51492F851F9D9B2000EE7ED7 /* Model */,
+				51492F861F9D9B2000EE7ED7 /* View */,
+				51492F841F9D9B2000EE7ED7 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -124,6 +305,9 @@
 		518509B51F9B36F200B14941 /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				51492F881F9D9B2800EE7ED7 /* Model */,
+				51492F891F9D9B2800EE7ED7 /* View */,
+				51492F871F9D9B2800EE7ED7 /* Controller */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -131,6 +315,9 @@
 		518509B61F9B36F200B14941 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				51492F7E1F9D9AEE00EE7ED7 /* Model */,
+				51492F7F1F9D9AEE00EE7ED7 /* View */,
+				51492F7C1F9D9AEE00EE7ED7 /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -138,6 +325,9 @@
 		518509B71F9B36F200B14941 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				51492F8B1F9D9B3000EE7ED7 /* Model */,
+				51492F8C1F9D9B3000EE7ED7 /* View */,
+				51492F8A1F9D9B3000EE7ED7 /* Controller */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -145,6 +335,8 @@
 		518509B81F9B36F200B14941 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				51492FC01F9DD3DC00EE7ED7 /* Extension */,
+				51492F4E1F9D774D00EE7ED7 /* YZwebp */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -193,6 +385,7 @@
 		518509871F9B319900B14941 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DY;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "瞿嘉洪";
@@ -235,6 +428,10 @@
 				5185099D1F9B319900B14941 /* LaunchScreen.storyboard in Resources */,
 				5185099A1F9B319900B14941 /* Assets.xcassets in Resources */,
 				518509981F9B319900B14941 /* Main.storyboard in Resources */,
+				51492F731F9D829000EE7ED7 /* Live.storyboard in Resources */,
+				51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */,
+				51492F791F9D82CD00EE7ED7 /* Profile.storyboard in Resources */,
+				51492F761F9D82B700EE7ED7 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +450,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				518509931F9B319900B14941 /* AppDelegate.swift in Sources */,
+				51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */,
+				51492FC21F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift in Sources */,
+				51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +475,49 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		51492F6E1F9D827C00EE7ED7 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51492F6F1F9D827C00EE7ED7 /* Base */,
+			);
+			name = Home.storyboard;
+			path = ../../Main;
+			sourceTree = "<group>";
+		};
+		51492F711F9D829000EE7ED7 /* Live.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51492F721F9D829000EE7ED7 /* Base */,
+			);
+			name = Live.storyboard;
+			path = ../../Main;
+			sourceTree = "<group>";
+		};
+		51492F741F9D82B700EE7ED7 /* Follow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51492F751F9D82B700EE7ED7 /* Base */,
+			);
+			name = Follow.storyboard;
+			path = ../../Main;
+			sourceTree = "<group>";
+		};
+		51492F771F9D82CD00EE7ED7 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51492F781F9D82CD00EE7ED7 /* Base */,
+			);
+			name = Profile.storyboard;
+			path = ../../Main;
+			sourceTree = "<group>";
+		};
 		518509961F9B319900B14941 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				518509971F9B319900B14941 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		5185099B1F9B319900B14941 /* LaunchScreen.storyboard */ = {
@@ -392,9 +629,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DYZB_Swift/Classes/Tools/YZwebp/include/YZwebp",
+				);
 				INFOPLIST_FILE = DYZB_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DYZB_Swift/Classes/Tools/YZwebp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Mr.Qu.DYZB-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -406,9 +651,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DYZB_Swift/Classes/Tools/YZwebp/include/YZwebp",
+				);
 				INFOPLIST_FILE = DYZB_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DYZB_Swift/Classes/Tools/YZwebp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Mr.Qu.DYZB-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
