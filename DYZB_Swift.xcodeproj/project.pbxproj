@@ -16,6 +16,10 @@
 		51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */; };
 		51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */; };
 		51492FC21F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FC11F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift */; };
+		51492FC41F9DE72600EE7ED7 /* DYPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FC31F9DE72600EE7ED7 /* DYPageTitleView.swift */; };
+		51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FC51F9DED8500EE7ED7 /* Common.swift */; };
+		51492FCA1F9EDBF600EE7ED7 /* DYPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FC91F9EDBF600EE7ED7 /* DYPageContentView.swift */; };
+		51492FCC1F9EDFBF00EE7ED7 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FCB1F9EDFBF00EE7ED7 /* UIColor-Extension.swift */; };
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 		51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYHomeViewController.swift; sourceTree = "<group>"; };
 		51492FC11F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		51492FC31F9DE72600EE7ED7 /* DYPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPageTitleView.swift; sourceTree = "<group>"; };
+		51492FC51F9DED8500EE7ED7 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		51492FC91F9EDBF600EE7ED7 /* DYPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPageContentView.swift; sourceTree = "<group>"; };
+		51492FCB1F9EDFBF00EE7ED7 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +136,8 @@
 		51492F7F1F9D9AEE00EE7ED7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				51492FC31F9DE72600EE7ED7 /* DYPageTitleView.swift */,
+				51492FC91F9EDBF600EE7ED7 /* DYPageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				51492FC11F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift */,
+				51492FCB1F9EDFBF00EE7ED7 /* UIColor-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 			children = (
 				51492FC01F9DD3DC00EE7ED7 /* Extension */,
 				51492F4E1F9D774D00EE7ED7 /* YZwebp */,
+				51492FC51F9DED8500EE7ED7 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -450,8 +462,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				518509931F9B319900B14941 /* AppDelegate.swift in Sources */,
+				51492FCC1F9EDFBF00EE7ED7 /* UIColor-Extension.swift in Sources */,
 				51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */,
 				51492FC21F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift in Sources */,
+				51492FCA1F9EDBF600EE7ED7 /* DYPageContentView.swift in Sources */,
+				51492FC41F9DE72600EE7ED7 /* DYPageTitleView.swift in Sources */,
+				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,
 				51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
