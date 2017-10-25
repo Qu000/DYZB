@@ -165,6 +165,9 @@ extension DYPageTitleView {
     
         //4.变化的targetLabel
         targetLabel.textColor = UIColor(r: kNormalColor.0 + colorRange.0 * progress, g: kNormalColor.1 + colorRange.1 * progress, b: kNormalColor.2 + colorRange.2 * progress)
+        
+        //5.记录最新的index
+        currentIndex = targetIndex
     }
 }
 
