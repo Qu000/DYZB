@@ -8,14 +8,20 @@
 
 import UIKit
 
+protocol DYPageTitleViewDelegate : class {
+    func pageTitleView(titleView : DYPageTitleView, selectedIndex index : Int)
+}//selectedIndex外部参数，index内部参数
+
 fileprivate let kScrollLineH : CGFloat = 2
 
 // MARK:- 定义DYPageTitleView类
 class DYPageTitleView: UIView {
     //MARK:- 定义属性
     fileprivate var titles : [String]
-    
+    fileprivate var currentIndex : Int = 0
+    weak var delegate : DYPageTitleViewDelegate?
     //MARK:- 懒加载
+    fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
     fileprivate lazy var scrollView : UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
@@ -29,7 +35,7 @@ class DYPageTitleView: UIView {
         scrollLine.backgroundColor = UIColor.orange
         return scrollLine
     }()
-    fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
+    
     
     
     //MARK:- 自定义构造函数
@@ -84,6 +90,10 @@ extension DYPageTitleView {
             scrollView.addSubview(label)
             
             titleLabels.append(label)
+            //5.给Label添加收视
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(tapGes:)))
+            label.addGestureRecognizer(tapGes)
         }
     }
     fileprivate func setupBottomMenuAndScrollLine() {
@@ -104,3 +114,56 @@ extension DYPageTitleView {
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
     }
 }
+
+//MARK:- 监听Label的点击事件(事件监听，需要加@objc)
+extension DYPageTitleView {
+    @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer){
+        //1.获取当前Label
+        guard let currentLabel = tapGes.view as? UILabel else{ return }
+        
+        //2.获取之前Label
+        let oldLabel = titleLabels[currentIndex];
+        
+        //3.切换文字颜色
+        currentLabel.textColor = UIColor.orange
+        oldLabel.textColor = UIColor.darkGray
+        
+        //4.保存最新Label的下表值
+        currentIndex = currentLabel.tag
+        
+        //5.滚动条发生滚动
+        let scrollLineX = CGFloat(currentIndex) * scrollLine.frame.width
+        UIView.animate(withDuration: 0.25) { 
+            self.scrollLine.frame.origin.x = scrollLineX
+        }
+        
+        //6.通知代理 
+        delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+    }
+}
+
+//MARK:- 对外暴露的方法
+extension DYPageTitleView {
+    func setTitleWithProgress(progress: CGFloat, sourceIndex: Int, targetIndex: Int)  {
+        //1.取出sourceLabel／targetLabel
+        let sourceLabel = titleLabels[sourceIndex]
+        let targetLabel = titleLabels[targetIndex]
+        
+        //2.颜色渐变处理
+        //处理滑块逻辑
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -11,12 +11,12 @@ private let kTitleViewH : CGFloat = 40
 
 class DYHomeViewController: UIViewController {
     //MARK:- 懒加载属性(这里用了闭包)
-    fileprivate lazy var pageTitleView : DYPageTitleView = {
+    fileprivate lazy var pageTitleView : DYPageTitleView = {[weak self] in
     
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let titleView = DYPageTitleView(frame: titleFrame, titles: titles)
-//        titleView.backgroundColor = UIColor.purple
+        titleView.delegate = self
         return titleView
     }()
     fileprivate lazy var pageContentView : DYPageContentView = {[weak self] in
@@ -34,9 +34,10 @@ class DYHomeViewController: UIViewController {
         
         let contentView = DYPageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
         
+        contentView.delegate = self
+        
         return contentView
     }()
-    
     
     //MARK:- 系统的回调函数
     override func viewDidLoad() {
@@ -46,7 +47,7 @@ class DYHomeViewController: UIViewController {
     }
 
 }
-// MARK:--UI(swift3里用fileprivate; swift4里是private，取消了fileprivate)
+// MARK:-UI界面(swift3里用fileprivate; swift4里是private，取消了fileprivate)
 extension DYHomeViewController {
     fileprivate func setupUI() {
         //0.不需要调整UIScrollView的内边距
@@ -94,3 +95,20 @@ extension DYHomeViewController {
       
     }
 }
+
+// MARK:- 遵守DYPageTitleViewDelegate协议
+extension DYHomeViewController : DYPageTitleViewDelegate {
+    func pageTitleView(titleView: DYPageTitleView, selectedIndex index: Int) {
+//        print(index)
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+// MARK:- 遵守DYPageContentViewDelegate协议
+extension DYHomeViewController : DYPageContentViewDelegate {
+    func pageContentView(contentView: DYPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+       pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+
+

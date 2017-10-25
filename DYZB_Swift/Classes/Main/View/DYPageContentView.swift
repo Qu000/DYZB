@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol DYPageContentViewDelegate : class {
+    func pageContentView(contentView: DYPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
+}
 fileprivate let ContentCellID = "ContentCellID"
 
 class DYPageContentView: UIView {
@@ -15,7 +18,8 @@ class DYPageContentView: UIView {
     // MARK:- 定义属性
     fileprivate var childVcs : [UIViewController]
     fileprivate weak var parentViewController : UIViewController?
-    
+    fileprivate var startOffsetx : CGFloat = 0
+    weak var delegate : DYPageContentViewDelegate?
     // MARK:- 懒加载属性
     fileprivate lazy var collectionView : UICollectionView = {[weak self] in
        //1.创建layout
@@ -32,6 +36,7 @@ class DYPageContentView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.bounces = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
 
         
@@ -90,6 +95,64 @@ extension DYPageContentView : UICollectionViewDataSource {
     }
 }
 
+// MARK:- 遵守UICollectionViewDelegate
+extension DYPageContentView : UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        startOffsetx = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("scroll")
+        //1.要获取的数据
+        var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
+        //2.判断是左滑还是右滑
+        let currentOffsetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.bounds.width
+        if currentOffsetX > startOffsetx {//left
+            //1.计算progress
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
+            
+            //2.计算sourceIndex
+            sourceIndex = Int(currentOffsetX / scrollViewW)
+            
+            //3.计算targetIndex
+            targetIndex = sourceIndex + 1
+            if targetIndex >= childVcs.count {//越界处理
+                targetIndex = childVcs.count - 1
+            }
+            
+            //4.如果完全滑过去了
+            if currentOffsetX - startOffsetx == scrollViewW {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+        }else{//right
+            progress = 1 - (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW))
+            
+            targetIndex = Int(currentOffsetX / scrollViewW)
+            
+            sourceIndex = targetIndex + 1
+            if sourceIndex >= childVcs.count {
+                sourceIndex = childVcs.count - 1
+            }
+        }
+        
+        //3.将progress／sourceIndex／targetIndex传递给titleView
+//        print("progress:\(progress) sourceIndex:\(sourceIndex)  targetIndex:\(targetIndex)")
+        delegate?.pageContentView(contentView: self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+
+// MARK:- 对外暴露的方法
+extension DYPageContentView {
+    func setCurrentIndex(currentIndex : Int) {
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: false)
+    }
+}
 
 
 
