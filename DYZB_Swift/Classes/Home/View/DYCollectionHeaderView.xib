@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="DYCollectionHeaderView" customModule="DYZB_Swift" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -49,17 +48,20 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="5rK-s6-nEQ" firstAttribute="centerY" secondItem="uZV-RJ-cAz" secondAttribute="centerY" id="8iC-bR-0zW"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="PKj-Dc-jnB" secondAttribute="bottom" constant="5" id="Hwq-Y7-3rf"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="DDZ-4k-Fnt" secondAttribute="trailing" id="QXE-tn-ZPW"/>
+                <constraint firstAttribute="bottom" secondItem="PKj-Dc-jnB" secondAttribute="bottom" constant="5" id="Hwq-Y7-3rf"/>
+                <constraint firstAttribute="trailing" secondItem="DDZ-4k-Fnt" secondAttribute="trailing" id="QXE-tn-ZPW"/>
                 <constraint firstItem="uZV-RJ-cAz" firstAttribute="top" secondItem="DDZ-4k-Fnt" secondAttribute="bottom" constant="11" id="SbH-Ww-eXO"/>
-                <constraint firstItem="DDZ-4k-Fnt" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="Wm7-qW-Per"/>
-                <constraint firstItem="DDZ-4k-Fnt" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="bDx-8Q-Fca"/>
+                <constraint firstItem="DDZ-4k-Fnt" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Wm7-qW-Per"/>
+                <constraint firstItem="DDZ-4k-Fnt" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="bDx-8Q-Fca"/>
                 <constraint firstItem="PKj-Dc-jnB" firstAttribute="top" secondItem="DDZ-4k-Fnt" secondAttribute="bottom" constant="5" id="f6S-CI-7ni"/>
-                <constraint firstItem="uZV-RJ-cAz" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="10" id="mRW-wI-eEZ"/>
+                <constraint firstItem="uZV-RJ-cAz" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="mRW-wI-eEZ"/>
                 <constraint firstItem="5rK-s6-nEQ" firstAttribute="leading" secondItem="uZV-RJ-cAz" secondAttribute="trailing" constant="5" id="owK-eC-eug"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="PKj-Dc-jnB" secondAttribute="trailing" constant="10" id="tCX-Eh-m1T"/>
+                <constraint firstAttribute="trailing" secondItem="PKj-Dc-jnB" secondAttribute="trailing" constant="10" id="tCX-Eh-m1T"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="iconImg" destination="uZV-RJ-cAz" id="rOq-Fo-r4R"/>
+                <outlet property="titleLab" destination="5rK-s6-nEQ" id="nwe-HC-2wE"/>
+            </connections>
         </collectionReusableView>
     </objects>
     <resources>

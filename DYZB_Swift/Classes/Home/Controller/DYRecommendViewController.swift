@@ -20,6 +20,8 @@ fileprivate let kHeaderViewID = "kHeaderViewID" //组头
 class DYRecommendViewController: UIViewController {
  
     // MARK: - 懒加载
+    fileprivate lazy var recommedVM : DYRecommenViewModel = DYRecommenViewModel()
+    
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -77,9 +79,11 @@ extension DYRecommendViewController {
 // MARK: - 网络请求
 extension DYRecommendViewController {
     fileprivate func loadData(){
-        NetworkTools.requestData(.get, URLString: "http://httpbin.org/get", parameters: ["name" : "July"]) { (result) in
-                print(result)
-            }
+        
+        recommedVM.requestData {
+            self.collectionView.reloadData()
+        }
+        
     }
 }
 
@@ -87,14 +91,19 @@ extension DYRecommendViewController {
 extension DYRecommendViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+//        return 12
+        return recommedVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+//        if section == 0 {
+//            return 8
+//        }
+//        return 4
+        let group = recommedVM.anchorGroups[section]
+        
+        return group.anchors.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -116,7 +125,9 @@ extension DYRecommendViewController : UICollectionViewDataSource, UICollectionVi
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //1.取出section的HeaderView
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! DYCollectionHeaderView
+        //2.取出模型
+        headerView.group = recommedVM.anchorGroups[indexPath.section]
         
         return headerView
     }
