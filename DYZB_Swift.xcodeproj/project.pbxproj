@@ -37,6 +37,7 @@
 		51E3AB601FBD657700CC4FFD /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB5F1FBD657700CC4FFD /* NSDate-Extension.swift */; };
 		51E3AB641FBD6A7900CC4FFD /* DYAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB631FBD6A7900CC4FFD /* DYAnchorGroup.swift */; };
 		51E3AB661FBD6D6100CC4FFD /* DYAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB651FBD6D6100CC4FFD /* DYAnchorModel.swift */; };
+		51E3AB681FBD906900CC4FFD /* DYCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB671FBD906900CC4FFD /* DYCollectionBaseCell.swift */; };
 		6309D237DCA48F04CC244D5F /* Pods_DYZB_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB90C77D1FB7767F076B48 /* Pods_DYZB_SwiftTests.framework */; };
 		E275318CBA9717627306EFCE /* Pods_DYZB_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4461FEC237AC96E0A095D05 /* Pods_DYZB_Swift.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		51E3AB5F1FBD657700CC4FFD /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		51E3AB631FBD6A7900CC4FFD /* DYAnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAnchorGroup.swift; sourceTree = "<group>"; };
 		51E3AB651FBD6D6100CC4FFD /* DYAnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAnchorModel.swift; sourceTree = "<group>"; };
+		51E3AB671FBD906900CC4FFD /* DYCollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionBaseCell.swift; sourceTree = "<group>"; };
 		74694CFE9562DB7D27BAD8D0 /* Pods-DYZB_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_SwiftTests/Pods-DYZB_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		74C75A882A7EC5D3E3DE5C85 /* Pods-DYZB_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_Swift/Pods-DYZB_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		D75A237C27AB019ED0656B60 /* Pods-DYZB_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_SwiftTests/Pods-DYZB_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				51DCB53C1FBC2F9B00CCA952 /* DYCollectionNormalCell.xib */,
 				51DCB53F1FBC358D00CCA952 /* DYCollectionPrettyCell.swift */,
 				51DCB5401FBC358D00CCA952 /* DYCollectionPrettyCell.xib */,
+				51E3AB671FBD906900CC4FFD /* DYCollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				51492FCC1F9EDFBF00EE7ED7 /* UIColor-Extension.swift in Sources */,
 				51E3AB641FBD6A7900CC4FFD /* DYAnchorGroup.swift in Sources */,
 				51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */,
+				51E3AB681FBD906900CC4FFD /* DYCollectionBaseCell.swift in Sources */,
 				51492FC21F9DD6F400EE7ED7 /* UIBarButtonItem-Extension.swift in Sources */,
 				51DCB5391FBC2ADC00CCA952 /* DYCollectionHeaderView.swift in Sources */,
 				51492FCA1F9EDBF600EE7ED7 /* DYPageContentView.swift in Sources */,

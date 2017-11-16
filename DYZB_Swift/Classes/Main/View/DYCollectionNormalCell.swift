@@ -8,8 +8,22 @@
 
 import UIKit
 
-class DYCollectionNormalCell: UICollectionViewCell {
+class DYCollectionNormalCell: DYCollectionBaseCell {
 
-    var anchor : DYAnchorModel?
+    // MARK: - 控件属性
+    
+    @IBOutlet weak var roomNameLab: UILabel!
+    
+    // MARK: - 模型属性
+
+    override var anchor : DYAnchorModel?{
+        didSet{
+       
+            // 1.将属性传递给父类
+            super.anchor = anchor
+            
+            roomNameLab.text = anchor?.room_name
+        }
+    }
 
 }
