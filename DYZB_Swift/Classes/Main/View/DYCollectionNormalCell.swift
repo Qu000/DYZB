@@ -10,9 +10,6 @@ import UIKit
 
 class DYCollectionNormalCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    var anchor : DYAnchorModel?
 
 }

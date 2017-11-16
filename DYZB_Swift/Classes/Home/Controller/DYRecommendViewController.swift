@@ -111,17 +111,31 @@ extension DYRecommendViewController : UICollectionViewDataSource, UICollectionVi
         /*
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
         return cell
+         
+         
+         //1.定义cell
+         var cell : UICollectionViewCell!
+         
+         //2.取出对应cell
+         if indexPath.section == 1 {
+         cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+         }else{
+         cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+         }
+         return cell
          */
-        //1.定义cell
-        var cell : UICollectionViewCell!
-        
+        let group = recommedVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
         //2.取出对应cell
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! DYCollectionPrettyCell
+            cell.anchor = anchor
+            return cell
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! DYCollectionNormalCell
+            cell.anchor = anchor
+            return cell
         }
-        return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //1.取出section的HeaderView
