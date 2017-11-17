@@ -124,6 +124,7 @@ extension DYRecommendViewController : UICollectionViewDataSource, UICollectionVi
          }
          return cell
          */
+        /*
         let group = recommedVM.anchorGroups[indexPath.section]
         let anchor = group.anchors[indexPath.item]
         //2.取出对应cell
@@ -136,6 +137,23 @@ extension DYRecommendViewController : UICollectionViewDataSource, UICollectionVi
             cell.anchor = anchor
             return cell
         }
+         */
+        let group = recommedVM.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        //2.定义cell
+        var cell : DYCollectionBaseCell!
+        
+        //3.取出对应cell
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! DYCollectionPrettyCell
+            
+        }else{
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! DYCollectionNormalCell
+            
+        }
+        //4.将模型赋值给cell
+        cell.anchor = anchor
+        return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         //1.取出section的HeaderView

@@ -122,8 +122,12 @@ extension DYPageTitleView {
 //MARK:- 监听Label的点击事件(事件监听，需要加@objc)
 extension DYPageTitleView {
     @objc fileprivate func titleLabelClick(tapGes : UITapGestureRecognizer){
-        //1.获取当前Label
+        
+        //0.获取当前Label
         guard let currentLabel = tapGes.view as? UILabel else{ return }
+        
+        //1.如果重复点击同一个title时，直接返回
+        if currentLabel.tag == currentIndex { return }
         
         //2.获取之前Label
         let oldLabel = titleLabels[currentIndex];
