@@ -13,6 +13,7 @@ fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
 fileprivate let kNormalItemH = kItemW * 3 / 4
 fileprivate let kPrettyItemH = kItemW * 4 / 3
 fileprivate let kHeaderViewH : CGFloat = 50
+fileprivate let kCycleViewH = kScreenW * 3 / 8
 
 fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
 fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
@@ -53,7 +54,13 @@ class DYRecommendViewController: UIViewController {
          */
         return collectionView
     }()
-
+    fileprivate lazy var cycleView : DYRecommedCycleView = {
+        let cycleView = DYRecommedCycleView.recommedCycleView()
+        
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        
+        return cycleView
+    }()
     
     // MARK: - 系统回调函数
     override func viewDidLoad() {
@@ -74,6 +81,12 @@ extension DYRecommendViewController {
     fileprivate func setupUI() {
         //1.将UICollectionView添加到控制器View中
         view.addSubview(collectionView)
+        
+        //2.将cycle加到collection中
+        collectionView.addSubview(cycleView)
+        
+        //3.设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
     }
 }
 // MARK: - 网络请求
