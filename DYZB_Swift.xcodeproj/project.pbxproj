@@ -12,6 +12,10 @@
 		511130671FBE7028001CB8D9 /* DYCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130651FBE7028001CB8D9 /* DYCollectionCycleCell.swift */; };
 		511130681FBE7028001CB8D9 /* DYCollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130661FBE7028001CB8D9 /* DYCollectionCycleCell.xib */; };
 		5111306A1FBE85A5001CB8D9 /* DYCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130691FBE85A5001CB8D9 /* DYCycleModel.swift */; };
+		511130701FBEC3C6001CB8D9 /* DYCollectionGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5111306F1FBEC3C6001CB8D9 /* DYCollectionGameView.swift */; };
+		511130721FBEC3CF001CB8D9 /* DYCollectionGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */; };
+		511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */; };
+		511130761FBEC8F6001CB8D9 /* DYCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */; };
 		51492F541F9D774D00EE7ED7 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F521F9D774D00EE7ED7 /* WebP.framework */; };
 		51492F551F9D774D00EE7ED7 /* libYZwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F531F9D774D00EE7ED7 /* libYZwebp.a */; };
 		51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F6E1F9D827C00EE7ED7 /* Home.storyboard */; };
@@ -65,6 +69,10 @@
 		511130651FBE7028001CB8D9 /* DYCollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionCycleCell.swift; sourceTree = "<group>"; };
 		511130661FBE7028001CB8D9 /* DYCollectionCycleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionCycleCell.xib; sourceTree = "<group>"; };
 		511130691FBE85A5001CB8D9 /* DYCycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCycleModel.swift; sourceTree = "<group>"; };
+		5111306F1FBEC3C6001CB8D9 /* DYCollectionGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionGameView.swift; sourceTree = "<group>"; };
+		511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameView.xib; sourceTree = "<group>"; };
+		511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionGameCell.swift; sourceTree = "<group>"; };
+		511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameCell.xib; sourceTree = "<group>"; };
 		51492F511F9D774D00EE7ED7 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
 		51492F521F9D774D00EE7ED7 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		51492F531F9D774D00EE7ED7 /* libYZwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYZwebp.a; sourceTree = "<group>"; };
@@ -253,6 +261,10 @@
 				511130631FBE67B1001CB8D9 /* DYRecommedCycleView.xib */,
 				511130651FBE7028001CB8D9 /* DYCollectionCycleCell.swift */,
 				511130661FBE7028001CB8D9 /* DYCollectionCycleCell.xib */,
+				5111306F1FBEC3C6001CB8D9 /* DYCollectionGameView.swift */,
+				511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */,
+				511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */,
+				511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -538,6 +550,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511130761FBEC8F6001CB8D9 /* DYCollectionGameCell.xib in Resources */,
 				51DCB5421FBC358D00CCA952 /* DYCollectionPrettyCell.xib in Resources */,
 				51DCB53A1FBC2ADC00CCA952 /* DYCollectionHeaderView.xib in Resources */,
 				5185099D1F9B319900B14941 /* LaunchScreen.storyboard in Resources */,
@@ -547,6 +560,7 @@
 				51DCB53E1FBC2F9B00CCA952 /* DYCollectionNormalCell.xib in Resources */,
 				511130681FBE7028001CB8D9 /* DYCollectionCycleCell.xib in Resources */,
 				51492F731F9D829000EE7ED7 /* Live.storyboard in Resources */,
+				511130721FBEC3CF001CB8D9 /* DYCollectionGameView.xib in Resources */,
 				51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */,
 				51492F791F9D82CD00EE7ED7 /* Profile.storyboard in Resources */,
 				51492F761F9D82B700EE7ED7 /* Follow.storyboard in Resources */,
@@ -663,6 +677,7 @@
 				51DCB5411FBC358D00CCA952 /* DYCollectionPrettyCell.swift in Sources */,
 				518509931F9B319900B14941 /* AppDelegate.swift in Sources */,
 				51492FCC1F9EDFBF00EE7ED7 /* UIColor-Extension.swift in Sources */,
+				511130701FBEC3C6001CB8D9 /* DYCollectionGameView.swift in Sources */,
 				51E3AB641FBD6A7900CC4FFD /* DYAnchorGroup.swift in Sources */,
 				51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */,
 				51E3AB681FBD906900CC4FFD /* DYCollectionBaseCell.swift in Sources */,
@@ -675,6 +690,7 @@
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
 				51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */,
 				51492FC41F9DE72600EE7ED7 /* DYPageTitleView.swift in Sources */,
+				511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */,
 				51E3AB601FBD657700CC4FFD /* NSDate-Extension.swift in Sources */,
 				511130671FBE7028001CB8D9 /* DYCollectionCycleCell.swift in Sources */,
 				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,

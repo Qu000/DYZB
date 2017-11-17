@@ -22,6 +22,9 @@ class DYAnchorGroup: NSObject {
     var tag_name : String = ""
     /// 该组应显示的图标url
     var icon_name : String = "home_header_normal"
+    /// 游戏对应的图标
+    var icon_url : String = ""
+    
     /// 定义主播的模型对象数组
     lazy var anchors : [DYAnchorModel] = [DYAnchorModel]()
     
