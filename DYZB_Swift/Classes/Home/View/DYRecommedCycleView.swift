@@ -10,7 +10,19 @@ import UIKit
 fileprivate let kCycleCellID = "kCycleCellID"
 
 class DYRecommedCycleView: UIView {
+    // MARK: - 定义属性
+    var cycleModel : [DYCycleModel]? {
+        didSet {
+            //刷新
+            collectionView.reloadData()
+            
+            //设置pageControl的个数
+            pageControll.numberOfPages = cycleModel?.count ?? 0
+        
+        }
+    }
     
+
     // MARK: - 控件属性
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -53,13 +65,15 @@ extension DYRecommedCycleView {
 extension DYRecommedCycleView : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+
+        return cycleModel?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! DYCollectionCycleCell
+        cell.cycleModel = cycleModel![indexPath.item]
         
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
+//        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
         
         return cell
     }

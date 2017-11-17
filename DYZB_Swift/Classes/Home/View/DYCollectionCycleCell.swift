@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DYCollectionCycleCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - 控件属性
+    
+    @IBOutlet weak var iconImg: UIImageView!
+    
+    @IBOutlet weak var titleLab: UILabel!
+    // MARK: - 定义模型属性
+    var cycleModel : DYCycleModel?{
+        didSet{
+            titleLab.text = cycleModel?.title
+            let iconURL = URL(string: cycleModel?.pic_url ?? "")!
+            iconImg.kf.setImage(with: iconURL, placeholder: UIImage(named: "Img_default"))
+            
+        }
     }
+    
+
 
 }

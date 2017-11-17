@@ -93,10 +93,15 @@ extension DYRecommendViewController {
 extension DYRecommendViewController {
     fileprivate func loadData(){
         
+        //请求推荐数据
         recommedVM.requestData {
             self.collectionView.reloadData()
         }
         
+        //请求轮播图数据
+        recommedVM.requestCycleData {
+            self.cycleView.cycleModel = self.recommedVM.cycleModels
+        }
     }
 }
 

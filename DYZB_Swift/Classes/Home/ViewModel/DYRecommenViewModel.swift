@@ -13,7 +13,8 @@ class DYRecommenViewModel {
     // MARK: - 懒加载属性
     // 0 1 2-12
     lazy var anchorGroups : [DYAnchorGroup] = [DYAnchorGroup]()
-
+    lazy var cycleModels : [DYCycleModel] = [DYCycleModel]()
+    
     fileprivate lazy var bigDataGroup : DYAnchorGroup = DYAnchorGroup()
     fileprivate lazy var prettyGroup : DYAnchorGroup = DYAnchorGroup()
 
@@ -25,6 +26,7 @@ class DYRecommenViewModel {
     }
  */
 extension DYRecommenViewModel {
+    //请求推荐数据
     func requestData(finishCallback : @escaping () -> ()) {
 
         //1.paramters
@@ -104,4 +106,23 @@ extension DYRecommenViewModel {
             finishCallback()
         }
     }
+    
+    //请求轮播图数据
+    func requestCycleData(finishCallback : @escaping () -> ()) {
+        NetworkTools.requestData(.get, URLString: "http://www.douyutv.com/api/v1/slide/6", parameters: ["version" : "2.300"]) { (result) in
+            // 1.获取整体字典数据
+            guard let resultDict = result as? [String : NSObject] else { return }
+            
+            // 2.根据data的key获取数据
+            guard let dataArray = resultDict["data"] as? [[String : NSObject]] else { return }
+            
+            // 3.字典转模型对象
+            for dict in dataArray {
+                self.cycleModels.append(DYCycleModel(dict: dict))
+            }
+            
+            finishCallback()
+        }
+    }
 }
+
