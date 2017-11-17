@@ -7,13 +7,38 @@
 //
 
 import UIKit
+fileprivate let kCycleCellID = "kCycleCellID"
 
 class DYRecommedCycleView: UIView {
+    
+    // MARK: - 控件属性
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var pageControll: UIPageControl!
+    // MARK: - 系统回调
     override func awakeFromNib() {
         super.awakeFromNib()
         
         //设置该控件不随父控件的拉伸而拉伸
         autoresizingMask = UIViewAutoresizing()
+        
+        //注册cell
+        collectionView.register(UINib(nibName: "DYCollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
+  
+    }
+    // MARK: - 只有在layoutSubviews()里拿到的frame才是最正确的
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        //设置collectionView的layout
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = collectionView.bounds.size
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.scrollDirection = .horizontal
+        collectionView.isPagingEnabled = true
+        
     }
 
 }
@@ -23,4 +48,37 @@ extension DYRecommedCycleView {
         return Bundle.main.loadNibNamed("DYRecommedCycleView", owner: nil, options: nil)?.first as! DYRecommedCycleView
     }
 }
+
+// MARK: - 遵守UICollectionView的数据源协议
+extension DYRecommedCycleView : UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
+        
+        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
+        
+        return cell
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

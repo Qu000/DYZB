@@ -24,6 +24,9 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="JZQ-Ap-UeA"/>
+                    </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="75B-nR-6Yv">
                     <rect key="frame" x="326" y="113" width="39" height="37"/>
@@ -41,6 +44,10 @@
                 <constraint firstAttribute="bottom" secondItem="75B-nR-6Yv" secondAttribute="bottom" id="dDd-rh-s2L"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="Mz1-0H-3h2" id="RSE-Cx-KgM"/>
+                <outlet property="pageControll" destination="75B-nR-6Yv" id="zpm-bk-INH"/>
+            </connections>
             <point key="canvasLocation" x="27" y="53"/>
         </view>
     </objects>
