@@ -10,7 +10,10 @@ import UIKit
 fileprivate let kCycleCellID = "kCycleCellID"
 
 class DYRecommedCycleView: UIView {
+    
     // MARK: - 定义属性
+    var cycleTimer : Timer?
+    
     var cycleModel : [DYCycleModel]? {
         didSet {
             //刷新
@@ -23,10 +26,13 @@ class DYRecommedCycleView: UIView {
             let indexPath = NSIndexPath(item: (cycleModel?.count ?? 0) * 10, section: 0)
             collectionView.scrollToItem(at: indexPath as IndexPath, at: .left, animated: false)
             
+            // 4.添加定时器
+            removeCycleTimer()
+            addCycleTimer()
+            
         }
     }
     
-
     // MARK: - 控件属性
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -96,9 +102,36 @@ extension DYRecommedCycleView : UICollectionViewDelegate {
         pageControll.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModel?.count ?? 1)
         
     }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        removeCycleTimer()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        addCycleTimer()
+    }
 }
 
-
+// MARK: - 对定时器的操作方法
+extension DYRecommedCycleView {
+    fileprivate func addCycleTimer() {
+        
+        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(self.scrollToNext), userInfo: nil, repeats: true)
+        RunLoop.main.add(cycleTimer!, forMode: RunLoopMode.commonModes)
+    }
+    @objc fileprivate func scrollToNext(){
+        // 1.获取滚动的偏移量
+        let currentOffsetX = collectionView.contentOffset.x
+        let offsetX = currentOffsetX + collectionView.bounds.width
+        
+        // 2.滚动该位置
+        collectionView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
+    }
+    fileprivate func removeCycleTimer () {
+        cycleTimer?.invalidate() // 从运行循环中移除
+        cycleTimer = nil
+    }
+    
+}
 
 
 
