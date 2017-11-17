@@ -11,7 +11,7 @@ import UIKit
 class DYCycleModel: NSObject {
 
     ///标题
-    let title : String = ""
+    var title : String = ""
     
     ///展示的图片地址
     var pic_url : String = ""

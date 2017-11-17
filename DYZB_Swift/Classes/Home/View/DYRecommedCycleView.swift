@@ -19,6 +19,10 @@ class DYRecommedCycleView: UIView {
             //设置pageControl的个数
             pageControll.numberOfPages = cycleModel?.count ?? 0
         
+            //默认滚动到中间的某个位置//防止用户往前滚时，没有东西
+            let indexPath = NSIndexPath(item: (cycleModel?.count ?? 0) * 10, section: 0)
+            collectionView.scrollToItem(at: indexPath as IndexPath, at: .left, animated: false)
+            
         }
     }
     
@@ -66,12 +70,14 @@ extension DYRecommedCycleView : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return cycleModel?.count ?? 0
+        return (cycleModel?.count ?? 0) * 10000//为了无限轮播
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! DYCollectionCycleCell
-        cell.cycleModel = cycleModel![indexPath.item]
+//        cell.cycleModel = cycleModel![indexPath.item]//不轮播的时候
+        cell.cycleModel = cycleModel![indexPath.item % cycleModel!.count]//为了做轮播的循环处理
+        
         
 //        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
         
@@ -79,8 +85,18 @@ extension DYRecommedCycleView : UICollectionViewDataSource{
     }
 }
 
-
-
+// MARK: - 遵守UICollectionView的代理协议
+extension DYRecommedCycleView : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 1.获取滚动的偏移量
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width / 2
+        
+        //2.计算pageControl的currentIndex
+//        pageControll.currentPage = Int(offsetX / scrollView.bounds.width)//不轮播时
+        pageControll.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModel?.count ?? 1)
+        
+    }
+}
 
 
 

@@ -16,7 +16,7 @@ class DYCollectionCycleCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLab: UILabel!
     // MARK: - 定义模型属性
-    var cycleModel : DYCycleModel?{
+    var cycleModel : DYCycleModel? {
         didSet{
             titleLab.text = cycleModel?.title
             let iconURL = URL(string: cycleModel?.pic_url ?? "")!
