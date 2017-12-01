@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511046151FD109D100DCDC2A /* DYGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511046141FD109D100DCDC2A /* DYGameViewModel.swift */; };
 		511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130611FBE67A1001CB8D9 /* DYRecommedCycleView.swift */; };
 		511130641FBE67B1001CB8D9 /* DYRecommedCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130631FBE67B1001CB8D9 /* DYRecommedCycleView.xib */; };
 		511130671FBE7028001CB8D9 /* DYCollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130651FBE7028001CB8D9 /* DYCollectionCycleCell.swift */; };
@@ -48,6 +49,8 @@
 		51E3AB641FBD6A7900CC4FFD /* DYAnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB631FBD6A7900CC4FFD /* DYAnchorGroup.swift */; };
 		51E3AB661FBD6D6100CC4FFD /* DYAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB651FBD6D6100CC4FFD /* DYAnchorModel.swift */; };
 		51E3AB681FBD906900CC4FFD /* DYCollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3AB671FBD906900CC4FFD /* DYCollectionBaseCell.swift */; };
+		51F1146D1FD13438007DB729 /* DYGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1146C1FD13438007DB729 /* DYGameModel.swift */; };
+		51F1146F1FD136EE007DB729 /* DYBaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F1146E1FD136EE007DB729 /* DYBaseGameModel.swift */; };
 		6309D237DCA48F04CC244D5F /* Pods_DYZB_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DB90C77D1FB7767F076B48 /* Pods_DYZB_SwiftTests.framework */; };
 		E275318CBA9717627306EFCE /* Pods_DYZB_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4461FEC237AC96E0A095D05 /* Pods_DYZB_Swift.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +68,7 @@
 /* Begin PBXFileReference section */
 		03DB90C77D1FB7767F076B48 /* Pods_DYZB_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737FCAE1BAD669603884299 /* Pods-DYZB_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_Swift/Pods-DYZB_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		511046141FD109D100DCDC2A /* DYGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYGameViewModel.swift; sourceTree = "<group>"; };
 		511130611FBE67A1001CB8D9 /* DYRecommedCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYRecommedCycleView.swift; sourceTree = "<group>"; };
 		511130631FBE67B1001CB8D9 /* DYRecommedCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYRecommedCycleView.xib; sourceTree = "<group>"; };
 		511130651FBE7028001CB8D9 /* DYCollectionCycleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionCycleCell.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		51E3AB631FBD6A7900CC4FFD /* DYAnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAnchorGroup.swift; sourceTree = "<group>"; };
 		51E3AB651FBD6D6100CC4FFD /* DYAnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAnchorModel.swift; sourceTree = "<group>"; };
 		51E3AB671FBD906900CC4FFD /* DYCollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionBaseCell.swift; sourceTree = "<group>"; };
+		51F1146C1FD13438007DB729 /* DYGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYGameModel.swift; sourceTree = "<group>"; };
+		51F1146E1FD136EE007DB729 /* DYBaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYBaseGameModel.swift; sourceTree = "<group>"; };
 		74694CFE9562DB7D27BAD8D0 /* Pods-DYZB_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_SwiftTests/Pods-DYZB_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		74C75A882A7EC5D3E3DE5C85 /* Pods-DYZB_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_Swift/Pods-DYZB_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		D75A237C27AB019ED0656B60 /* Pods-DYZB_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_SwiftTests/Pods-DYZB_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +202,7 @@
 			children = (
 				51E3AB631FBD6A7900CC4FFD /* DYAnchorGroup.swift */,
 				51E3AB651FBD6D6100CC4FFD /* DYAnchorModel.swift */,
+				51F1146E1FD136EE007DB729 /* DYBaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				511130691FBE85A5001CB8D9 /* DYCycleModel.swift */,
+				51F1146C1FD13438007DB729 /* DYGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				51E3AB5D1FBD61CE00CC4FFD /* DYRecommenViewModel.swift */,
+				511046141FD109D100DCDC2A /* DYGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -691,15 +700,18 @@
 				51D4D6E41FCEB6B20011B0F5 /* DYGameViewController.swift in Sources */,
 				51586A1B1FA0827E00665DB1 /* DYRecommendViewController.swift in Sources */,
 				51E3AB661FBD6D6100CC4FFD /* DYAnchorModel.swift in Sources */,
+				51F1146D1FD13438007DB729 /* DYGameModel.swift in Sources */,
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
 				51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */,
 				51492FC41F9DE72600EE7ED7 /* DYPageTitleView.swift in Sources */,
 				511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */,
 				51E3AB601FBD657700CC4FFD /* NSDate-Extension.swift in Sources */,
+				511046151FD109D100DCDC2A /* DYGameViewModel.swift in Sources */,
 				511130671FBE7028001CB8D9 /* DYCollectionCycleCell.swift in Sources */,
 				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,
 				51E3AB5E1FBD61CE00CC4FFD /* DYRecommenViewModel.swift in Sources */,
 				51E3AB5B1FBD41BB00CC4FFD /* NetworkTools.swift in Sources */,
+				51F1146F1FD136EE007DB729 /* DYBaseGameModel.swift in Sources */,
 				51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

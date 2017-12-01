@@ -16,6 +16,7 @@ private let kGameCellID = "kGameCellID"
 class DYGameViewController: UIViewController {
 
     // MARK: - 懒加载属性
+    fileprivate lazy var gameVM : DYGameViewModel = DYGameViewModel()
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         
         // MARK: - 创建布局
@@ -40,6 +41,8 @@ class DYGameViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        
+        loadData()
     }
 
 }
@@ -50,10 +53,19 @@ extension DYGameViewController {
     }
 }
 
-// MARK: - 遵守数据源协议
+// MARK: - 请求数据
+extension DYGameViewController {
+    fileprivate func loadData() {
+        gameVM.loadAllGameData {
+            self.collectionView.reloadData()
+        }
+    }
+}
+
+// MARK: - 遵守数据源协议&代理
 extension DYGameViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return gameVM.games.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,6 +74,8 @@ extension DYGameViewController : UICollectionViewDataSource{
         
         cell.backgroundColor = UIColor.randomcolor()
 
+        let gameModel = gameVM.games[indexPath.item]
+        print(gameModel.tag_name)
         return cell
     }
 }
