@@ -35,6 +35,7 @@
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
 		5185099D1F9B319900B14941 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5185099B1F9B319900B14941 /* LaunchScreen.storyboard */; };
 		518509A81F9B319900B14941 /* DYZB_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509A71F9B319900B14941 /* DYZB_SwiftTests.swift */; };
+		51D4D6E41FCEB6B20011B0F5 /* DYGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4D6E31FCEB6B20011B0F5 /* DYGameViewController.swift */; };
 		51DCB5391FBC2ADC00CCA952 /* DYCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCB5371FBC2ADC00CCA952 /* DYCollectionHeaderView.swift */; };
 		51DCB53A1FBC2ADC00CCA952 /* DYCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51DCB5381FBC2ADC00CCA952 /* DYCollectionHeaderView.xib */; };
 		51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCB53B1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift */; };
@@ -97,6 +98,7 @@
 		518509A31F9B319900B14941 /* DYZB_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYZB_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509A71F9B319900B14941 /* DYZB_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYZB_SwiftTests.swift; sourceTree = "<group>"; };
 		518509A91F9B319900B14941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51D4D6E31FCEB6B20011B0F5 /* DYGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYGameViewController.swift; sourceTree = "<group>"; };
 		51DCB5371FBC2ADC00CCA952 /* DYCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionHeaderView.swift; sourceTree = "<group>"; };
 		51DCB5381FBC2ADC00CCA952 /* DYCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionHeaderView.xib; sourceTree = "<group>"; };
 		51DCB53B1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionNormalCell.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				51492F6E1F9D827C00EE7ED7 /* Home.storyboard */,
 				51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */,
 				51586A1A1FA0827E00665DB1 /* DYRecommendViewController.swift */,
+				51D4D6E31FCEB6B20011B0F5 /* DYGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				5111306A1FBE85A5001CB8D9 /* DYCycleModel.swift in Sources */,
 				51DCB5391FBC2ADC00CCA952 /* DYCollectionHeaderView.swift in Sources */,
 				51492FCA1F9EDBF600EE7ED7 /* DYPageContentView.swift in Sources */,
+				51D4D6E41FCEB6B20011B0F5 /* DYGameViewController.swift in Sources */,
 				51586A1B1FA0827E00665DB1 /* DYRecommendViewController.swift in Sources */,
 				51E3AB661FBD6D6100CC4FFD /* DYAnchorModel.swift in Sources */,
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
