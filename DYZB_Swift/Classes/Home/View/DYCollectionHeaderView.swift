@@ -15,6 +15,7 @@ class DYCollectionHeaderView: UICollectionReusableView {
     
     @IBOutlet weak var iconImg: UIImageView!
     
+    @IBOutlet weak var moreBtn: UIButton!
     // MARK: - 定义模型属性
     var group : DYAnchorGroup?{
         didSet {

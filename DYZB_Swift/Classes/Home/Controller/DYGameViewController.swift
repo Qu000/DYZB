@@ -11,8 +11,10 @@ private let kEdgMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 2 * kEdgMargin) / 3
 private let kItemH : CGFloat = kItemW * 6 / 5
 
-private let kGameCellID = "kGameCellID"
+private let kHeaderViewH : CGFloat = 50
 
+private let kGameCellID = "kGameCellID"
+private let kGameHeaderViewID = "kGameHeaderViewID"
 class DYGameViewController: UIViewController {
 
     // MARK: - 懒加载属性
@@ -25,12 +27,15 @@ class DYGameViewController: UIViewController {
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsetsMake(0, kEdgMargin, 0, kEdgMargin)
+        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
         
         // MARK: - 创建collectionView
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         
         // MARK: - collectionView注册cell
         collectionView.register(UINib(nibName: "DYCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
+        // MARK: - collectionView注册头部
+        collectionView.register(UINib(nibName: "DYCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kGameHeaderViewID)
         
         collectionView.backgroundColor = UIColor.white
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -78,6 +83,17 @@ extension DYGameViewController : UICollectionViewDataSource{
         cell.baseGame = gameModel
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        //1.取出headerView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kGameHeaderViewID, for: indexPath) as! DYCollectionHeaderView
+        
+        //1.设置headerView的属性
+        headerView.titleLab.text = "全部"
+        headerView.iconImg.image = UIImage(named: "Img_orange")
+        headerView.moreBtn.isHidden = true
+        return headerView
     }
 }
 
