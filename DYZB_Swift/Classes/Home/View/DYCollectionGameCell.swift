@@ -17,12 +17,12 @@ class DYCollectionGameCell: UICollectionViewCell {
     @IBOutlet weak var titleLab: UILabel!
     
     
-    // MARK: - 定义模型数据
-    var group : DYAnchorGroup?{
+    // MARK: - 定义模型数据//var group : DYAnchorGroup?
+    var baseGame : DYBaseGameModel?{
         didSet {
-            titleLab.text = group?.tag_name
+            titleLab.text = baseGame?.tag_name
             
-            if let iconURL = URL(string: group?.icon_url ?? "") {
+            if let iconURL = URL(string: baseGame?.icon_url ?? "") {
                 iconImg.kf.setImage(with: iconURL)
             } else {
                 iconImg.image = UIImage(named: "home_more_btn")

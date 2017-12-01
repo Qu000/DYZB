@@ -32,6 +32,8 @@ class DYGameViewController: UIViewController {
         // MARK: - collectionView注册cell
         collectionView.register(UINib(nibName: "DYCollectionGameCell", bundle: nil), forCellWithReuseIdentifier: kGameCellID)
         
+        collectionView.backgroundColor = UIColor.white
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.dataSource = self
         return collectionView
     }()
@@ -70,12 +72,11 @@ extension DYGameViewController : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // 1.获取cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kGameCellID, for: indexPath) as! DYCollectionGameCell
         
-        cell.backgroundColor = UIColor.randomcolor()
-
         let gameModel = gameVM.games[indexPath.item]
-        print(gameModel.tag_name)
+        cell.baseGame = gameModel
+        
         return cell
     }
 }
