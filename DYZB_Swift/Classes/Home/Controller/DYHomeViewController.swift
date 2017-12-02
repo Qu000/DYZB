@@ -28,7 +28,8 @@ class DYHomeViewController: UIViewController {
         var childVcs = [UIViewController]()
         childVcs.append(DYRecommendViewController())
         childVcs.append(DYGameViewController())
-        for _ in 0..<2 {
+        childVcs.append(DYAmuseViewController())
+        for _ in 0..<1 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)

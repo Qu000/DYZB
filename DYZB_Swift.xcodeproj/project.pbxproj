@@ -17,6 +17,7 @@
 		511130721FBEC3CF001CB8D9 /* DYCollectionGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */; };
 		511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */; };
 		511130761FBEC8F6001CB8D9 /* DYCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */; };
+		514717D61FD28282003CCB1F /* DYAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514717D51FD28282003CCB1F /* DYAmuseViewController.swift */; };
 		51492F541F9D774D00EE7ED7 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F521F9D774D00EE7ED7 /* WebP.framework */; };
 		51492F551F9D774D00EE7ED7 /* libYZwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F531F9D774D00EE7ED7 /* libYZwebp.a */; };
 		51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F6E1F9D827C00EE7ED7 /* Home.storyboard */; };
@@ -78,6 +79,7 @@
 		511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameView.xib; sourceTree = "<group>"; };
 		511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionGameCell.swift; sourceTree = "<group>"; };
 		511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameCell.xib; sourceTree = "<group>"; };
+		514717D51FD28282003CCB1F /* DYAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseViewController.swift; sourceTree = "<group>"; };
 		51492F511F9D774D00EE7ED7 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
 		51492F521F9D774D00EE7ED7 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		51492F531F9D774D00EE7ED7 /* libYZwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYZwebp.a; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				51492F8D1F9D9BE200EE7ED7 /* DYHomeViewController.swift */,
 				51586A1A1FA0827E00665DB1 /* DYRecommendViewController.swift */,
 				51D4D6E31FCEB6B20011B0F5 /* DYGameViewController.swift */,
+				514717D51FD28282003CCB1F /* DYAmuseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				51F1146D1FD13438007DB729 /* DYGameModel.swift in Sources */,
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
 				51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */,
+				514717D61FD28282003CCB1F /* DYAmuseViewController.swift in Sources */,
 				51492FC41F9DE72600EE7ED7 /* DYPageTitleView.swift in Sources */,
 				511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */,
 				51E3AB601FBD657700CC4FFD /* NSDate-Extension.swift in Sources */,
