@@ -46,11 +46,15 @@ class DYAmuseViewController: UIViewController {
         return collectionView
         }()
     
+    
+    fileprivate lazy var amuseVM : DYAmuseViewModel = DYAmuseViewModel()
     // MARK: - 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        
+        loadData()
     }
 
 }
@@ -60,26 +64,44 @@ extension DYAmuseViewController {
         view.addSubview(collectionView)
     }
 }
+// MARK: - 请求数据
+extension DYAmuseViewController {
+    fileprivate func loadData() {
+        amuseVM.loadAmuseData {
+            self.collectionView.reloadData()
+        }
+    }
+}
 
 
 // MARK: - 遵守collectionView的数据源协议与代理
 extension DYAmuseViewController : UICollectionViewDataSource, UICollectionViewDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 8
+        return amuseVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return amuseVM.anchorGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //1.取出cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! DYCollectionNormalCell
         
-        cell.backgroundColor = UIColor.randomcolor()
         //2.给cell设置数据
+        cell.anchor = amuseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        //1.取出headerView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! DYCollectionHeaderView
+        //2.设置数据
+        headerView.group = amuseVM.anchorGroups[indexPath.section]
+        //3.
+        
+        return headerView
     }
 }
 

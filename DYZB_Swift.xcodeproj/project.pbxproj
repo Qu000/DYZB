@@ -18,6 +18,7 @@
 		511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */; };
 		511130761FBEC8F6001CB8D9 /* DYCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */; };
 		514717D61FD28282003CCB1F /* DYAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514717D51FD28282003CCB1F /* DYAmuseViewController.swift */; };
+		514717D81FD28FC0003CCB1F /* DYAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514717D71FD28FC0003CCB1F /* DYAmuseViewModel.swift */; };
 		51492F541F9D774D00EE7ED7 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F521F9D774D00EE7ED7 /* WebP.framework */; };
 		51492F551F9D774D00EE7ED7 /* libYZwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F531F9D774D00EE7ED7 /* libYZwebp.a */; };
 		51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F6E1F9D827C00EE7ED7 /* Home.storyboard */; };
@@ -80,6 +81,7 @@
 		511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionGameCell.swift; sourceTree = "<group>"; };
 		511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameCell.xib; sourceTree = "<group>"; };
 		514717D51FD28282003CCB1F /* DYAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseViewController.swift; sourceTree = "<group>"; };
+		514717D71FD28FC0003CCB1F /* DYAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseViewModel.swift; sourceTree = "<group>"; };
 		51492F511F9D774D00EE7ED7 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
 		51492F521F9D774D00EE7ED7 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		51492F531F9D774D00EE7ED7 /* libYZwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYZwebp.a; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 			children = (
 				51E3AB5D1FBD61CE00CC4FFD /* DYRecommenViewModel.swift */,
 				511046141FD109D100DCDC2A /* DYGameViewModel.swift */,
+				514717D71FD28FC0003CCB1F /* DYAmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				518509931F9B319900B14941 /* AppDelegate.swift in Sources */,
 				51492FCC1F9EDFBF00EE7ED7 /* UIColor-Extension.swift in Sources */,
 				511130701FBEC3C6001CB8D9 /* DYCollectionGameView.swift in Sources */,
+				514717D81FD28FC0003CCB1F /* DYAmuseViewModel.swift in Sources */,
 				51E3AB641FBD6A7900CC4FFD /* DYAnchorGroup.swift in Sources */,
 				51492F801F9D9AEE00EE7ED7 /* MainViewController.swift in Sources */,
 				51E3AB681FBD906900CC4FFD /* DYCollectionBaseCell.swift in Sources */,
