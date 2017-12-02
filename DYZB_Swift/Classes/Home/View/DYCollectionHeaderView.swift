@@ -24,12 +24,20 @@ class DYCollectionHeaderView: UICollectionReusableView {
         }
     }
     
-
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
 }
+// MARK: - 从xib中快速创建的类方法
+extension DYCollectionHeaderView {
+    class func collectionHeaderView() -> DYCollectionHeaderView {
+        return Bundle.main.loadNibNamed("DYCollectionHeaderView", owner: nil, options: nil)?.first as! DYCollectionHeaderView
+    }
+}
+
+
+
+
+
