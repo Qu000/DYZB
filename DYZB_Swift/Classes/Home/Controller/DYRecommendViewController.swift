@@ -110,9 +110,19 @@ extension DYRecommendViewController {
             //1.1显示推荐数据
             self.collectionView.reloadData()
             
-            //1.2将数据传递给GameView
-            self.gameView.groups = self.recommedVM.anchorGroups
+            var groups = self.recommedVM.anchorGroups
+            //1.2移除前两组
+            groups.removeFirst()//颜值
+            groups.removeFirst()//热门
+            
+            //1.3手动添加  更多
+            let moreGroup = DYAnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+            //1.4将数据传递给GameView//self.recommedVM.anchorGroups
+            self.gameView.groups = groups
         }
+        
         
         //2.请求轮播图数据
         recommedVM.requestCycleData {

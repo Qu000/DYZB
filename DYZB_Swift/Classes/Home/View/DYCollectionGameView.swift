@@ -13,17 +13,17 @@ fileprivate let kGameCellID = "kGameCellID"
 private let kEdgeInsetMargin : CGFloat = 10
 class DYCollectionGameView: UIView {
 
-    // MARK: - 定义数据属性
-    var groups : [DYAnchorGroup]?{
+    // MARK: - 定义数据属性//DYAnchorGroup
+    var groups : [DYBaseGameModel]?{
         didSet {
             //移除前两组
-            groups?.removeFirst()//颜值
-            groups?.removeFirst()//热门
+//            groups?.removeFirst()//颜值
+//            groups?.removeFirst()//热门
             
             //手动添加  更多
-            let moreGroup = DYAnchorGroup()
-            moreGroup.tag_name = "更多"
-            groups?.append(moreGroup)
+//            let moreGroup = DYAnchorGroup()
+//            moreGroup.tag_name = "更多"
+//            groups?.append(moreGroup)
             
             //刷新
             collectionView.reloadData()

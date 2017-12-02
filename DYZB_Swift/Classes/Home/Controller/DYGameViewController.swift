@@ -92,7 +92,16 @@ extension DYGameViewController {
 extension DYGameViewController {
     fileprivate func loadData() {
         gameVM.loadAllGameData {
+            //1.展示全部游戏
             self.collectionView.reloadData()
+            
+            //2.展示常用游戏
+//            var tempArray = [DYBaseGameModel]()
+//            for i in 0..<10 {
+//                tempArray.append(self.gameVM.games[i])
+//            }
+
+            self.gameView.groups = Array(self.gameVM.games[0..<10])
         }
     }
 }
