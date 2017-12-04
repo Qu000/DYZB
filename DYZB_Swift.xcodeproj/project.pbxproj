@@ -17,8 +17,10 @@
 		511130721FBEC3CF001CB8D9 /* DYCollectionGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */; };
 		511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */; };
 		511130761FBEC8F6001CB8D9 /* DYCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */; };
+		5118DDF91FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5118DDF81FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift */; };
 		514717D61FD28282003CCB1F /* DYAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514717D51FD28282003CCB1F /* DYAmuseViewController.swift */; };
 		514717D81FD28FC0003CCB1F /* DYAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514717D71FD28FC0003CCB1F /* DYAmuseViewModel.swift */; };
+		514717DB1FD296A5003CCB1F /* DYBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514717DA1FD296A5003CCB1F /* DYBaseViewModel.swift */; };
 		51492F541F9D774D00EE7ED7 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F521F9D774D00EE7ED7 /* WebP.framework */; };
 		51492F551F9D774D00EE7ED7 /* libYZwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51492F531F9D774D00EE7ED7 /* libYZwebp.a */; };
 		51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51492F6E1F9D827C00EE7ED7 /* Home.storyboard */; };
@@ -80,8 +82,10 @@
 		511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameView.xib; sourceTree = "<group>"; };
 		511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCollectionGameCell.swift; sourceTree = "<group>"; };
 		511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYCollectionGameCell.xib; sourceTree = "<group>"; };
+		5118DDF81FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYBaseAnchorViewController.swift; sourceTree = "<group>"; };
 		514717D51FD28282003CCB1F /* DYAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseViewController.swift; sourceTree = "<group>"; };
 		514717D71FD28FC0003CCB1F /* DYAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseViewModel.swift; sourceTree = "<group>"; };
+		514717DA1FD296A5003CCB1F /* DYBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYBaseViewModel.swift; sourceTree = "<group>"; };
 		51492F511F9D774D00EE7ED7 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
 		51492F521F9D774D00EE7ED7 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
 		51492F531F9D774D00EE7ED7 /* libYZwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYZwebp.a; sourceTree = "<group>"; };
@@ -158,6 +162,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		514717D91FD2967B003CCB1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				514717DA1FD296A5003CCB1F /* DYBaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		51492F491F9D771700EE7ED7 /* DYZBResouce */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +209,7 @@
 			children = (
 				518509961F9B319900B14941 /* Main.storyboard */,
 				51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */,
+				5118DDF81FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -428,6 +441,7 @@
 		518509B61F9B36F200B14941 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				514717D91FD2967B003CCB1F /* ViewModel */,
 				51492F7E1F9D9AEE00EE7ED7 /* Model */,
 				51492F7F1F9D9AEE00EE7ED7 /* View */,
 				51492F7C1F9D9AEE00EE7ED7 /* Controller */,
@@ -708,6 +722,7 @@
 				51586A1B1FA0827E00665DB1 /* DYRecommendViewController.swift in Sources */,
 				51E3AB661FBD6D6100CC4FFD /* DYAnchorModel.swift in Sources */,
 				51F1146D1FD13438007DB729 /* DYGameModel.swift in Sources */,
+				514717DB1FD296A5003CCB1F /* DYBaseViewModel.swift in Sources */,
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
 				51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */,
 				514717D61FD28282003CCB1F /* DYAmuseViewController.swift in Sources */,
@@ -719,6 +734,7 @@
 				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,
 				51E3AB5E1FBD61CE00CC4FFD /* DYRecommenViewModel.swift in Sources */,
 				51E3AB5B1FBD41BB00CC4FFD /* NetworkTools.swift in Sources */,
+				5118DDF91FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift in Sources */,
 				51F1146F1FD136EE007DB729 /* DYBaseGameModel.swift in Sources */,
 				51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */,
 			);

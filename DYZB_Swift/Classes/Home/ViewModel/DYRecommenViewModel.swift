@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DYRecommenViewModel {
+class DYRecommenViewModel : DYBaseViewModel{
 
     // MARK: - 懒加载属性
     // 0 1 2-12
-    lazy var anchorGroups : [DYAnchorGroup] = [DYAnchorGroup]()
+//    lazy var anchorGroups : [DYAnchorGroup] = [DYAnchorGroup]()
     lazy var cycleModels : [DYCycleModel] = [DYCycleModel]()
     
     fileprivate lazy var bigDataGroup : DYAnchorGroup = DYAnchorGroup()
@@ -84,6 +84,7 @@ extension DYRecommenViewModel {
         // http://capi.douyucdn.cn/api/v1/getHotCate?limit=4&offtset=0&time=1510813624
 //        print("\(NSDate.getCurrentTime())")
         dGroup.enter()
+        /*
         NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
             //5.1.将result转成字典类型
             guard let resultDict = result as? [String : NSObject] else { return }
@@ -94,9 +95,13 @@ extension DYRecommenViewModel {
                 let group = DYAnchorGroup(dict: dict)
                 self.anchorGroups.append(group)
             }
+         */
+        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             //5.4离开组
             dGroup.leave()
         }
+        
+ 
         
         //6.所有的数据都获取到之后，进行推荐
         dGroup.notify(queue: DispatchQueue.main) {

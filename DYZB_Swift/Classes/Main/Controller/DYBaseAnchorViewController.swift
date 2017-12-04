@@ -1,27 +1,28 @@
 //
-//  DYAmuseViewController.swift
+//  DYBaseAnchorViewController.swift
 //  DYZB_Swift
 //
-//  Created by qujiahong on 2017/12/2.
+//  Created by qujiahong on 2017/12/4.
 //  Copyright © 2017年 瞿嘉洪. All rights reserved.
 //
 
 import UIKit
 
-//fileprivate let kItemMargin : CGFloat = 10
-//fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
-//fileprivate let kNormalItemH = kItemW * 3 / 4
-//fileprivate let kPrettyItemH = kItemW * 4 / 3
-//fileprivate let kHeaderViewH : CGFloat = 50
-//
-//fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
-//fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
-//fileprivate let kHeaderViewID = "kHeaderViewID" //组头
-class DYAmuseViewController: DYBaseAnchorViewController {
+fileprivate let kItemMargin : CGFloat = 10
+fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
+fileprivate let kNormalItemH = kItemW * 3 / 4
+fileprivate let kPrettyItemH = kItemW * 4 / 3
+fileprivate let kHeaderViewH : CGFloat = 50
 
-    /*
-    // MARK: - 懒加载属性
-    fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
+fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
+fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
+fileprivate let kHeaderViewID = "kHeaderViewID" //组头
+class DYBaseAnchorViewController: UIViewController {
+
+    // MARK: - 定义属性
+    var baseVM : DYBaseViewModel!
+    
+    lazy var collectionView : UICollectionView = {[unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
@@ -43,52 +44,40 @@ class DYAmuseViewController: DYBaseAnchorViewController {
         collectionView.register(UINib(nibName: "DYCollectionPrettyCell",bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         
         collectionView.register(UINib(nibName: "DYCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
-       
+        
         return collectionView
-        }()*/
+        }()
     
-    
-    fileprivate lazy var amuseVM : DYAmuseViewModel = DYAmuseViewModel()
     // MARK: - 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        setupUI()
+        setupUI()
         
-//        loadData()
+        loadData()
     }
 
 }
 // MARK: - 设置UI界面
-//extension DYAmuseViewController {
-//    fileprivate func setupUI() {
-//        view.addSubview(collectionView)
-//    }
-//}
-// MARK: - 请求数据
-extension DYAmuseViewController {
-    override func loadData() {
-        //1.给父类中的viewmodel进行赋值
-        baseVM = amuseVM
-        
-        //2.请求数据
-        amuseVM.loadAmuseData {
-            self.collectionView.reloadData()
-        }
+extension DYBaseAnchorViewController {
+    func setupUI() {
+        view.addSubview(collectionView)
     }
 }
-
-
-/*
+// MARK: - 请求数据
+extension DYBaseAnchorViewController {
+    func loadData() { 
+    }
+}
 // MARK: - 遵守collectionView的数据源协议与代理
-extension DYAmuseViewController : UICollectionViewDataSource, UICollectionViewDelegate{
+extension DYBaseAnchorViewController : UICollectionViewDataSource, UICollectionViewDelegate{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return amuseVM.anchorGroups.count
+        return baseVM.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return amuseVM.anchorGroups[section].anchors.count
+        return baseVM.anchorGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -96,7 +85,7 @@ extension DYAmuseViewController : UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! DYCollectionNormalCell
         
         //2.给cell设置数据
-        cell.anchor = amuseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        cell.anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
         return cell
     }
     
@@ -104,27 +93,9 @@ extension DYAmuseViewController : UICollectionViewDataSource, UICollectionViewDe
         //1.取出headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! DYCollectionHeaderView
         //2.设置数据
-        headerView.group = amuseVM.anchorGroups[indexPath.section]
+        headerView.group = baseVM.anchorGroups[indexPath.section]
         //3.
         
         return headerView
     }
 }
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
