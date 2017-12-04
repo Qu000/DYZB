@@ -7,18 +7,18 @@
 //
 
 import UIKit
-
-fileprivate let kItemMargin : CGFloat = 10
-fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
-fileprivate let kNormalItemH = kItemW * 3 / 4
-fileprivate let kPrettyItemH = kItemW * 4 / 3
-fileprivate let kHeaderViewH : CGFloat = 50
+//fileprivate let kItemMargin : CGFloat = 10
+//fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
+//fileprivate let kNormalItemH = kItemW * 3 / 4
+//fileprivate let kPrettyItemH = kItemW * 4 / 3
+//fileprivate let kHeaderViewH : CGFloat = 50
 fileprivate let kCycleViewH = kScreenW * 3 / 8
 fileprivate let kGameViewH : CGFloat = 90
 
-fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
-fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
-fileprivate let kHeaderViewID = "kHeaderViewID" //组头
+//fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
+//fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
+//fileprivate let kHeaderViewID = "kHeaderViewID" //组头
+
 class DYRecommendViewController: DYBaseAnchorViewController {
  
     // MARK: - 懒加载
@@ -123,9 +123,9 @@ extension DYRecommendViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
-            return CGSize(width: kItemW, height: kPrettyItemH)
+            return CGSize(width: kNormalItemW, height: kPrettyItemH)
         }
-        return CGSize(width: kItemW, height: kNormalItemH)
+        return CGSize(width: kNormalItemW, height: kNormalItemH)
     }
 }
 

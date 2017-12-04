@@ -9,13 +9,13 @@
 import UIKit
 
 fileprivate let kItemMargin : CGFloat = 10
-fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
-fileprivate let kNormalItemH = kItemW * 3 / 4
-fileprivate let kPrettyItemH = kItemW * 4 / 3
+let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
+let kNormalItemH = kNormalItemW * 3 / 4
+let kPrettyItemH = kNormalItemW * 4 / 3
 fileprivate let kHeaderViewH : CGFloat = 50
 
 fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
-fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
+let kPrettyCellID = "kPrettyCellID" //pretty--Cell
 fileprivate let kHeaderViewID = "kHeaderViewID" //组头
 class DYBaseAnchorViewController: UIViewController {
 
@@ -25,7 +25,7 @@ class DYBaseAnchorViewController: UIViewController {
     lazy var collectionView : UICollectionView = {[unowned self] in
         //1.创建布局
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
+        layout.itemSize = CGSize(width: kNormalItemW, height: kNormalItemH)
         layout.minimumLineSpacing = 0//行间距
         layout.minimumInteritemSpacing = kItemMargin//item的间距
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)//组头
