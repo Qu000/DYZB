@@ -78,8 +78,8 @@ extension DYBaseAnchorViewController {
     func loadData() { 
     }
 }
-// MARK: - 遵守collectionView的数据源协议与代理
-extension DYBaseAnchorViewController : UICollectionViewDataSource, UICollectionViewDelegate{
+// MARK: - 遵守collectionView的数据源协议
+extension DYBaseAnchorViewController : UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return baseVM.anchorGroups.count
@@ -106,5 +106,34 @@ extension DYBaseAnchorViewController : UICollectionViewDataSource, UICollectionV
         //3.
         
         return headerView
+    }
+}
+
+// MARK: - 遵守collectionView的代理
+extension DYBaseAnchorViewController : UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        print("点击了：\(indexPath)")
+        
+        //1.取出对应的主播信息
+        let anchor = baseVM.anchorGroups[indexPath.section].anchors[indexPath.item]
+        
+        //2.判断是秀场room，还是普通room
+        anchor.isVertical == 0 ? pushNormalRoomVc() : presentShowRoomVc()
+        
+        //3.
+        //4.
+    }
+    
+    private func presentShowRoomVc(){
+        //1.创建vc
+        let showRoomVc = DYRoomShowViewController()
+        //2.以model的形式传出
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    private func pushNormalRoomVc(){
+        //1.创建vc
+        let normalRoomVc = DYRoomNormalViewController()
+        //2.以push的形式传出
+        navigationController?.pushViewController(normalRoomVc, animated: true)
     }
 }

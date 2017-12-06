@@ -42,6 +42,8 @@
 		5160DABF1FD7CB7500BC1BAC /* DYFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */; };
 		5160DAC11FD7D1C700BC1BAC /* DYFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */; };
 		5160DAC31FD7E1AA00BC1BAC /* DYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAC21FD7E1AA00BC1BAC /* DYBaseViewController.swift */; };
+		5160DACA1FD7EAF200BC1BAC /* DYRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAC91FD7EAF200BC1BAC /* DYRoomShowViewController.swift */; };
+		5160DACC1FD7EB2300BC1BAC /* DYRoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DACB1FD7EB2300BC1BAC /* DYRoomNormalViewController.swift */; };
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
@@ -115,6 +117,8 @@
 		5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYFunnyViewController.swift; sourceTree = "<group>"; };
 		5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYFunnyViewModel.swift; sourceTree = "<group>"; };
 		5160DAC21FD7E1AA00BC1BAC /* DYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYBaseViewController.swift; sourceTree = "<group>"; };
+		5160DAC91FD7EAF200BC1BAC /* DYRoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYRoomShowViewController.swift; sourceTree = "<group>"; };
+		5160DACB1FD7EB2300BC1BAC /* DYRoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYRoomNormalViewController.swift; sourceTree = "<group>"; };
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -372,6 +376,47 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		5160DAC41FD7EAB300BC1BAC /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				5160DAC51FD7EAB300BC1BAC /* ViewModel */,
+				5160DAC71FD7EAB300BC1BAC /* Model */,
+				5160DAC81FD7EAB300BC1BAC /* View */,
+				5160DAC61FD7EAB300BC1BAC /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		5160DAC51FD7EAB300BC1BAC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5160DAC61FD7EAB300BC1BAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5160DAC91FD7EAF200BC1BAC /* DYRoomShowViewController.swift */,
+				5160DACB1FD7EB2300BC1BAC /* DYRoomNormalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5160DAC71FD7EAB300BC1BAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5160DAC81FD7EAB300BC1BAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		518509861F9B319900B14941 = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +463,7 @@
 			children = (
 				518509B61F9B36F200B14941 /* Main */,
 				518509B41F9B36F200B14941 /* Home */,
+				5160DAC41FD7EAB300BC1BAC /* Room */,
 				518509B51F9B36F200B14941 /* Live */,
 				518509B31F9B36F200B14941 /* Follow */,
 				518509B71F9B36F200B14941 /* Profile */,
@@ -758,12 +804,14 @@
 				511046151FD109D100DCDC2A /* DYGameViewModel.swift in Sources */,
 				5160DAB71FD78EEA00BC1BAC /* DYAmuseMenuView.swift in Sources */,
 				511130671FBE7028001CB8D9 /* DYCollectionCycleCell.swift in Sources */,
+				5160DACA1FD7EAF200BC1BAC /* DYRoomShowViewController.swift in Sources */,
 				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,
 				51E3AB5E1FBD61CE00CC4FFD /* DYRecommenViewModel.swift in Sources */,
 				51E3AB5B1FBD41BB00CC4FFD /* NetworkTools.swift in Sources */,
 				5160DAC31FD7E1AA00BC1BAC /* DYBaseViewController.swift in Sources */,
 				5118DDF91FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift in Sources */,
 				51F1146F1FD136EE007DB729 /* DYBaseGameModel.swift in Sources */,
+				5160DACC1FD7EB2300BC1BAC /* DYRoomNormalViewController.swift in Sources */,
 				51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
