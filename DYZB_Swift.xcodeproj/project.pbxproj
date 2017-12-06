@@ -39,6 +39,8 @@
 		5160DAB91FD78F1300BC1BAC /* DYAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5160DAB81FD78F1300BC1BAC /* DYAmuseMenuView.xib */; };
 		5160DABC1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DABA1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.swift */; };
 		5160DABD1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5160DABB1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.xib */; };
+		5160DABF1FD7CB7500BC1BAC /* DYFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */; };
+		5160DAC11FD7D1C700BC1BAC /* DYFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */; };
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 		5160DAB81FD78F1300BC1BAC /* DYAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYAmuseMenuView.xib; sourceTree = "<group>"; };
 		5160DABA1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseMenuViewCell.swift; sourceTree = "<group>"; };
 		5160DABB1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYAmuseMenuViewCell.xib; sourceTree = "<group>"; };
+		5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYFunnyViewController.swift; sourceTree = "<group>"; };
+		5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYFunnyViewModel.swift; sourceTree = "<group>"; };
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 				51586A1A1FA0827E00665DB1 /* DYRecommendViewController.swift */,
 				51D4D6E31FCEB6B20011B0F5 /* DYGameViewController.swift */,
 				514717D51FD28282003CCB1F /* DYAmuseViewController.swift */,
+				5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -488,6 +493,7 @@
 				51E3AB5D1FBD61CE00CC4FFD /* DYRecommenViewModel.swift */,
 				511046141FD109D100DCDC2A /* DYGameViewModel.swift */,
 				514717D71FD28FC0003CCB1F /* DYAmuseViewModel.swift */,
+				5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -738,7 +744,9 @@
 				51E3AB661FBD6D6100CC4FFD /* DYAnchorModel.swift in Sources */,
 				51F1146D1FD13438007DB729 /* DYGameModel.swift in Sources */,
 				514717DB1FD296A5003CCB1F /* DYBaseViewModel.swift in Sources */,
+				5160DABF1FD7CB7500BC1BAC /* DYFunnyViewController.swift in Sources */,
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
+				5160DAC11FD7D1C700BC1BAC /* DYFunnyViewModel.swift in Sources */,
 				51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */,
 				514717D61FD28282003CCB1F /* DYAmuseViewController.swift in Sources */,
 				51492FC41F9DE72600EE7ED7 /* DYPageTitleView.swift in Sources */,

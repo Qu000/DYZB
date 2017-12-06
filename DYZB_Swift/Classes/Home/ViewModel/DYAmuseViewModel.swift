@@ -16,7 +16,7 @@ class DYAmuseViewModel : DYBaseViewModel{
 extension DYAmuseViewModel {
     func loadAmuseData(finishedCallback : @escaping () -> ()) {
         
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", parameters: nil, finishedCallback: finishedCallback)
+        loadAnchorData(isGropData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", parameters: nil, finishedCallback: finishedCallback)
         
         /*
         NetworkTools.requestData(.get, URLString: "http://capi.douyucdn.cn/api/v1/getHotRoom/2", parameters: nil) { (result) in

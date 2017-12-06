@@ -96,7 +96,7 @@ extension DYRecommenViewModel {
                 self.anchorGroups.append(group)
             }
          */
-        loadAnchorData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
+        loadAnchorData(isGropData: true, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             //5.4离开组
             dGroup.leave()
         }
