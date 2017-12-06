@@ -8,63 +8,38 @@
 
 import UIKit
 
-//fileprivate let kItemMargin : CGFloat = 10
-//fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
-//fileprivate let kNormalItemH = kItemW * 3 / 4
-//fileprivate let kPrettyItemH = kItemW * 4 / 3
-//fileprivate let kHeaderViewH : CGFloat = 50
-//
-//fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
-//fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
-//fileprivate let kHeaderViewID = "kHeaderViewID" //组头
+private let kMenuViewH : CGFloat = 200
 class DYAmuseViewController: DYBaseAnchorViewController {
 
-    /*
-    // MARK: - 懒加载属性
-    fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
-        //1.创建布局
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
-        layout.minimumLineSpacing = 0//行间距
-        layout.minimumInteritemSpacing = kItemMargin//item的间距
-        layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)//组头
-        layout.sectionInset = UIEdgeInsetsMake(0, kItemMargin, 0, kItemMargin)//设置组的内边距和margin
-        
-        //2.创建UICollectionView
-        let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
-        
-        collectionView.backgroundColor = UIColor.white
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        
-        collectionView.register(UINib(nibName: "DYCollectionNormalCell",bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
-        
-        collectionView.register(UINib(nibName: "DYCollectionPrettyCell",bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
-        
-        collectionView.register(UINib(nibName: "DYCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
-       
-        return collectionView
-        }()*/
-    
     
     fileprivate lazy var amuseVM : DYAmuseViewModel = DYAmuseViewModel()
+    fileprivate lazy var menuView : DYAmuseMenuView = {
+        let menuView = DYAmuseMenuView.amuseMenuView()
+        menuView.frame = CGRect(x: 0, y: -kMenuViewH, width: kScreenW, height: kMenuViewH)
+        return menuView
+    }()
     // MARK: - 系统回调
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        setupUI()
+        setupUI()
         
 //        loadData()
     }
 
 }
-// MARK: - 设置UI界面
-//extension DYAmuseViewController {
-//    fileprivate func setupUI() {
-//        view.addSubview(collectionView)
-//    }
-//}
+// MARK: - 设置UI
+extension DYAmuseViewController {
+    override func setupUI() {
+        super.setupUI()
+        
+        //添加菜单的view
+        collectionView.addSubview(menuView)
+        collectionView.contentInset = UIEdgeInsetsMake(kMenuViewH, 0, 0, 0)
+       
+    }
+}
+
 // MARK: - 请求数据
 extension DYAmuseViewController {
     override func loadData() {
@@ -77,6 +52,66 @@ extension DYAmuseViewController {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//fileprivate let kItemMargin : CGFloat = 10
+//fileprivate let kItemW = (kScreenW - 3 * kItemMargin) / 2
+//fileprivate let kNormalItemH = kItemW * 3 / 4
+//fileprivate let kPrettyItemH = kItemW * 4 / 3
+//fileprivate let kHeaderViewH : CGFloat = 50
+//
+//fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
+//fileprivate let kPrettyCellID = "kPrettyCellID" //pretty--Cell
+//fileprivate let kHeaderViewID = "kHeaderViewID" //组头
+
+
+// MARK: - 设置UI界面
+//extension DYAmuseViewController {
+//    fileprivate func setupUI() {
+//        view.addSubview(collectionView)
+//    }
+//}
+
+
+/*
+ // MARK: - 懒加载属性
+ fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
+ //1.创建布局
+ let layout = UICollectionViewFlowLayout()
+ layout.itemSize = CGSize(width: kItemW, height: kNormalItemH)
+ layout.minimumLineSpacing = 0//行间距
+ layout.minimumInteritemSpacing = kItemMargin//item的间距
+ layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)//组头
+ layout.sectionInset = UIEdgeInsetsMake(0, kItemMargin, 0, kItemMargin)//设置组的内边距和margin
+ 
+ //2.创建UICollectionView
+ let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+ 
+ collectionView.backgroundColor = UIColor.white
+ collectionView.dataSource = self
+ collectionView.delegate = self
+ collectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+ 
+ collectionView.register(UINib(nibName: "DYCollectionNormalCell",bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+ 
+ collectionView.register(UINib(nibName: "DYCollectionPrettyCell",bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
+ 
+ collectionView.register(UINib(nibName: "DYCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+ 
+ return collectionView
+ }()*/
+
+
 
 
 /*

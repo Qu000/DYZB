@@ -35,6 +35,8 @@
 		51492FCA1F9EDBF600EE7ED7 /* DYPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FC91F9EDBF600EE7ED7 /* DYPageContentView.swift */; };
 		51492FCC1F9EDFBF00EE7ED7 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51492FCB1F9EDFBF00EE7ED7 /* UIColor-Extension.swift */; };
 		51586A1B1FA0827E00665DB1 /* DYRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51586A1A1FA0827E00665DB1 /* DYRecommendViewController.swift */; };
+		5160DAB71FD78EEA00BC1BAC /* DYAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAB61FD78EEA00BC1BAC /* DYAmuseMenuView.swift */; };
+		5160DAB91FD78F1300BC1BAC /* DYAmuseMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5160DAB81FD78F1300BC1BAC /* DYAmuseMenuView.xib */; };
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
@@ -101,6 +103,8 @@
 		51492FC91F9EDBF600EE7ED7 /* DYPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPageContentView.swift; sourceTree = "<group>"; };
 		51492FCB1F9EDFBF00EE7ED7 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		51586A1A1FA0827E00665DB1 /* DYRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYRecommendViewController.swift; sourceTree = "<group>"; };
+		5160DAB61FD78EEA00BC1BAC /* DYAmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYAmuseMenuView.swift; sourceTree = "<group>"; };
+		5160DAB81FD78F1300BC1BAC /* DYAmuseMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYAmuseMenuView.xib; sourceTree = "<group>"; };
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 				511130711FBEC3CF001CB8D9 /* DYCollectionGameView.xib */,
 				511130731FBEC8F6001CB8D9 /* DYCollectionGameCell.swift */,
 				511130741FBEC8F6001CB8D9 /* DYCollectionGameCell.xib */,
+				5160DAB61FD78EEA00BC1BAC /* DYAmuseMenuView.swift */,
+				5160DAB81FD78F1300BC1BAC /* DYAmuseMenuView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +597,7 @@
 				518509981F9B319900B14941 /* Main.storyboard in Resources */,
 				51DCB53E1FBC2F9B00CCA952 /* DYCollectionNormalCell.xib in Resources */,
 				511130681FBE7028001CB8D9 /* DYCollectionCycleCell.xib in Resources */,
+				5160DAB91FD78F1300BC1BAC /* DYAmuseMenuView.xib in Resources */,
 				51492F731F9D829000EE7ED7 /* Live.storyboard in Resources */,
 				511130721FBEC3CF001CB8D9 /* DYCollectionGameView.xib in Resources */,
 				51492F701F9D827C00EE7ED7 /* Home.storyboard in Resources */,
@@ -730,6 +737,7 @@
 				511130751FBEC8F6001CB8D9 /* DYCollectionGameCell.swift in Sources */,
 				51E3AB601FBD657700CC4FFD /* NSDate-Extension.swift in Sources */,
 				511046151FD109D100DCDC2A /* DYGameViewModel.swift in Sources */,
+				5160DAB71FD78EEA00BC1BAC /* DYAmuseMenuView.swift in Sources */,
 				511130671FBE7028001CB8D9 /* DYCollectionCycleCell.swift in Sources */,
 				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,
 				51E3AB5E1FBD61CE00CC4FFD /* DYRecommenViewModel.swift in Sources */,
