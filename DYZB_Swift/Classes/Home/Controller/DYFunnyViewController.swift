@@ -30,6 +30,10 @@ extension DYFunnyViewController {
         //2. 请求数据
         funnyVM.loadFunnyData {
             self.collectionView.reloadData()
+            
+            
+            //请求完成
+            self.loaddataFinished()
         }
     }
 }

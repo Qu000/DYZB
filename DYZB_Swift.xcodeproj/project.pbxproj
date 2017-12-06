@@ -41,6 +41,7 @@
 		5160DABD1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5160DABB1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.xib */; };
 		5160DABF1FD7CB7500BC1BAC /* DYFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */; };
 		5160DAC11FD7D1C700BC1BAC /* DYFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */; };
+		5160DAC31FD7E1AA00BC1BAC /* DYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5160DAC21FD7E1AA00BC1BAC /* DYBaseViewController.swift */; };
 		518509931F9B319900B14941 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518509921F9B319900B14941 /* AppDelegate.swift */; };
 		518509981F9B319900B14941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 518509961F9B319900B14941 /* Main.storyboard */; };
 		5185099A1F9B319900B14941 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 518509991F9B319900B14941 /* Assets.xcassets */; };
@@ -113,6 +114,7 @@
 		5160DABB1FD79F6D00BC1BAC /* DYAmuseMenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYAmuseMenuViewCell.xib; sourceTree = "<group>"; };
 		5160DABE1FD7CB7500BC1BAC /* DYFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYFunnyViewController.swift; sourceTree = "<group>"; };
 		5160DAC01FD7D1C700BC1BAC /* DYFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYFunnyViewModel.swift; sourceTree = "<group>"; };
+		5160DAC21FD7E1AA00BC1BAC /* DYBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYBaseViewController.swift; sourceTree = "<group>"; };
 		5185098F1F9B319900B14941 /* DYZB_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		518509921F9B319900B14941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		518509971F9B319900B14941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				518509961F9B319900B14941 /* Main.storyboard */,
 				51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */,
 				5118DDF81FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift */,
+				5160DAC21FD7E1AA00BC1BAC /* DYBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				51492FC61F9DED8500EE7ED7 /* Common.swift in Sources */,
 				51E3AB5E1FBD61CE00CC4FFD /* DYRecommenViewModel.swift in Sources */,
 				51E3AB5B1FBD41BB00CC4FFD /* NetworkTools.swift in Sources */,
+				5160DAC31FD7E1AA00BC1BAC /* DYBaseViewController.swift in Sources */,
 				5118DDF91FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift in Sources */,
 				51F1146F1FD136EE007DB729 /* DYBaseGameModel.swift in Sources */,
 				51492F8E1F9D9BE200EE7ED7 /* DYHomeViewController.swift in Sources */,

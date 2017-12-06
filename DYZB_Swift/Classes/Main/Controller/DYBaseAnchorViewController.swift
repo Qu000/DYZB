@@ -17,7 +17,7 @@ fileprivate let kHeaderViewH : CGFloat = 50
 fileprivate let kNormalCellID = "kNormalCellID" //normal--Cell
 let kPrettyCellID = "kPrettyCellID" //pretty--Cell
 fileprivate let kHeaderViewID = "kHeaderViewID" //组头
-class DYBaseAnchorViewController: UIViewController {
+class DYBaseAnchorViewController: DYBaseViewController {
 
     // MARK: - 定义属性
     var baseVM : DYBaseViewModel!
@@ -60,8 +60,17 @@ class DYBaseAnchorViewController: UIViewController {
 }
 // MARK: - 设置UI界面
 extension DYBaseAnchorViewController {
-    func setupUI() {
+    override func setupUI() {
+        //1.给父类中内容view的引用进行赋值
+        contentView = collectionView
+        
+        //2.添加collectionView
         view.addSubview(collectionView)
+        
+        //3.调用父类的super
+        super.setupUI()
+        
+        
     }
 }
 // MARK: - 请求数据

@@ -52,7 +52,11 @@ extension DYAmuseViewController {
             var tempGroup = self.amuseVM.anchorGroups
             tempGroup.removeFirst()
             self.menuView.groups = tempGroup
+            
+            //请求完成
+            self.loaddataFinished()
         }
+        
     }
 }
 

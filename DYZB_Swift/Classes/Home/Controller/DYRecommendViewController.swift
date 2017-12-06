@@ -96,6 +96,9 @@ extension DYRecommendViewController {
             groups.append(moreGroup)
             //1.4将数据传递给GameView//self.recommedVM.anchorGroups
             self.gameView.groups = groups
+            
+            //请求完成
+            self.loaddataFinished()
         }
         
         

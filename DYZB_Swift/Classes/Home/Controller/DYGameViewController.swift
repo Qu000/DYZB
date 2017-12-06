@@ -17,7 +17,7 @@ private let kGameViewH : CGFloat = 90
 
 private let kGameCellID = "kGameCellID"
 private let kGameHeaderViewID = "kGameHeaderViewID"
-class DYGameViewController: UIViewController {
+class DYGameViewController: DYBaseViewController {
 
     // MARK: - 懒加载属性
     fileprivate lazy var gameVM : DYGameViewModel = DYGameViewModel()
@@ -73,7 +73,10 @@ class DYGameViewController: UIViewController {
 }
 // MARK: - 设置UI界面
 extension DYGameViewController {
-    fileprivate func setupUI() {
+     override func setupUI() {
+        //0.给ContentView进行赋值
+        contentView = collectionView
+        
         //1.添加collectionView
         view.addSubview(collectionView)
         
@@ -85,6 +88,8 @@ extension DYGameViewController {
         
         //4.将常用游戏的view添加到collectionView中
         collectionView.addSubview(gameView)
+        
+        super.setupUI()
     }
 }
 
@@ -102,6 +107,9 @@ extension DYGameViewController {
 //            }
 
             self.gameView.groups = Array(self.gameVM.games[0..<10])
+            
+            //请求完成
+            self.loaddataFinished()
         }
     }
 }
