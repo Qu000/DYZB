@@ -49,6 +49,9 @@ extension DYAmuseViewController {
         //2.请求数据
         amuseVM.loadAmuseData {
             self.collectionView.reloadData()
+            var tempGroup = self.amuseVM.anchorGroups
+            tempGroup.removeFirst()
+            self.menuView.groups = tempGroup
         }
     }
 }
