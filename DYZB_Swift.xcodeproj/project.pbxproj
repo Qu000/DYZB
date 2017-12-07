@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510D6EA41FD8DACC00E028D9 /* DYCustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D6EA31FD8DACC00E028D9 /* DYCustomNavigationController.swift */; };
 		511046151FD109D100DCDC2A /* DYGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511046141FD109D100DCDC2A /* DYGameViewModel.swift */; };
 		511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511130611FBE67A1001CB8D9 /* DYRecommedCycleView.swift */; };
 		511130641FBE67B1001CB8D9 /* DYRecommedCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511130631FBE67B1001CB8D9 /* DYRecommedCycleView.xib */; };
@@ -81,6 +82,7 @@
 /* Begin PBXFileReference section */
 		03DB90C77D1FB7767F076B48 /* Pods_DYZB_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3737FCAE1BAD669603884299 /* Pods-DYZB_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB_Swift/Pods-DYZB_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		510D6EA31FD8DACC00E028D9 /* DYCustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCustomNavigationController.swift; sourceTree = "<group>"; };
 		511046141FD109D100DCDC2A /* DYGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYGameViewModel.swift; sourceTree = "<group>"; };
 		511130611FBE67A1001CB8D9 /* DYRecommedCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYRecommedCycleView.swift; sourceTree = "<group>"; };
 		511130631FBE67B1001CB8D9 /* DYRecommedCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DYRecommedCycleView.xib; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				51492F7D1F9D9AEE00EE7ED7 /* MainViewController.swift */,
 				5118DDF81FD4D62C005A8DE7 /* DYBaseAnchorViewController.swift */,
 				5160DAC21FD7E1AA00BC1BAC /* DYBaseViewController.swift */,
+				510D6EA31FD8DACC00E028D9 /* DYCustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -794,6 +797,7 @@
 				51F1146D1FD13438007DB729 /* DYGameModel.swift in Sources */,
 				514717DB1FD296A5003CCB1F /* DYBaseViewModel.swift in Sources */,
 				5160DABF1FD7CB7500BC1BAC /* DYFunnyViewController.swift in Sources */,
+				510D6EA41FD8DACC00E028D9 /* DYCustomNavigationController.swift in Sources */,
 				511130621FBE67A1001CB8D9 /* DYRecommedCycleView.swift in Sources */,
 				5160DAC11FD7D1C700BC1BAC /* DYFunnyViewModel.swift in Sources */,
 				51DCB53D1FBC2F9B00CCA952 /* DYCollectionNormalCell.swift in Sources */,
