@@ -20,12 +20,16 @@ class DYRoomNormalViewController: UIViewController, UIGestureRecognizerDelegate 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         //隐藏导航栏(系统默认手势消除了)
         navigationController?.setNavigationBarHidden(true, animated: true)
         
+        /*CustomNavigation里自定义了手势
         //保持手势
         navigationController?.interactivePopGestureRecognizer?.delegate = self
+ 
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+         */
     }
     
     override func viewWillDisappear(_ animated: Bool) {
